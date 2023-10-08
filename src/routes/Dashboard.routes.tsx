@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState, useEffect } from 'react'
+// import mapa from "../components/mapa"
 
 export function Dashboard(){
 
@@ -8,6 +9,7 @@ export function Dashboard(){
 
     return(
         <div>
+          {/* <MapContainer /> */}
             <h1 className="text-4xl font-bold self-center mb-4">
               Data Piezométrica
             </h1>

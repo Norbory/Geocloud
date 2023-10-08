@@ -8,3 +8,6 @@ export function Page404(){
         </div>
     );
 }
+
+// AIzaSyCBPGE1qMls4tvWT09TRWjwYjoQeELS_LU: key google
+//-10.605691859755938, -76.21212524622916
