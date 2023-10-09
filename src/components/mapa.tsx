@@ -1,34 +1,35 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { Component } from 'react';
-import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
+import { useMemo } from "react";
+import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
+const apiKey  = import.meta.env.API_KEY;
 
-interface MapContainerProps {
-  google: unknown;
+
+export default function MapContainer() {
+  const { isLoaded } = useLoadScript({
+    googleMapsApiKey: apiKey  || "",
+  });
+
+  if (!isLoaded) return <div>Loading...</div>;
+  return <Map />;
 }
 
-class MapContainer extends Component<MapContainerProps> {
-  render() {
-    // const mapStyles = {
-    //   width: '100%',
-    //   height: '400px',
-    // };
+function Map() {
+  const center = useMemo(() => ({ lat: 44, lng: -80 }), []);
 
-    return (
-      <></>
-      // <Map
-      //   google={this.props.google}
-      //   style={mapStyles}
-      //   initialCenter={{ lat: -12.605691859755938, lng: -78.21212524622916 }} // Coordenadas iniciales (San Francisco)
-      // >
-      //   <Marker
-      //     position={{ lat: -10.605691859755938, lng: -76.21212524622916 }} // Coordenadas del marcador
-      //     title="Unidad minera El Porvenir"
-      //   />
-      // </Map>
-    );
-  }
+  return (
+    <GoogleMap 
+      zoom={10} 
+      center={center} 
+      mapContainerStyle={{ 
+        width: '100%', 
+        height: '400px',
+        backgroundColor: 'lightgray',
+        border: '1px solid black',
+        borderRadius: '8px',
+        boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+      }}
+    >
+      <Marker position={center} />
+    </GoogleMap>
+  );
 }
-
-export default GoogleApiWrapper({
-  apiKey: 'AIzaSyCBPGE1qMls4tvWT09TRWjwYjoQeELS_LU', // Reemplaza con tu API Key de Google Maps
-})(MapContainer);
