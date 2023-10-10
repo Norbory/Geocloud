@@ -8,7 +8,7 @@ export function Dashboard(){
     const [digits,setDigits] = React.useState(0);
 
     return(
-        <div>
+        <>
           {/* <MapContainer /> */}
             <h1 className="text-4xl font-bold self-center mb-4">
               Data Piezométrica
@@ -31,6 +31,6 @@ export function Dashboard(){
                 </p>
               </div>
             </div>
-        </div>
+        </>
     );
 }

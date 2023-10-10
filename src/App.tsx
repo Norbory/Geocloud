@@ -1,13 +1,17 @@
-import {Sidebar} from "./components/sidebar"
-import Pantalla from './Pantalla';
+import { Outlet } from "react-router-dom";
+import { Sidebar } from "./components/sidebar"
+import { Dashboard } from "./routes";
 import './App.css'
 
 function App() {
 
   return (
-    <div className="flex">
+    <div className="w-full flex-col overflow-x-hidden">
       <Sidebar/>
-      <Pantalla/>
+      <div>
+        <Dashboard/>
+        <Outlet/>
+      </div>
     </div>
   )
 }
