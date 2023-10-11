@@ -1,4 +1,4 @@
-import {Sidebar} from "./components/sidebar"
+// import {Sidebar} from "./components/sidebar"
 import Pantalla from './Pantalla';
 import './App.css'
 
@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <Sidebar/>
+      {/* <Sidebar/> */}
       <Pantalla/>
     </>
   )
