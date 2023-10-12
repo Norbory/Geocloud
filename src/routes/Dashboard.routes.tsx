@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useState, useEffect } from 'react'
-// import mapa from "../components/mapa"
+import React from 'react'
 
 export function Dashboard(){
 

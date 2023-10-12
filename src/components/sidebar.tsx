@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export function Sidebar() {
    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -18,7 +18,7 @@ export function Sidebar() {
             </svg>
          </button>
          <aside id="sidebar-multi-level-sidebar" className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
-            <div className="h-full px-3 py-4 overflow-y-auto dark:bg-gray-800" style={{ backgroundColor: "#003049" }}>
+            <div className="h-full px-3 py-4 overflow-y-auto dark:bg-gray-800" style={{ backgroundColor: "#1F263E" }}>
                <a href="https://www.geohidrac.com/" className="flex items-center pl-2.5 mb-5">
                   <img src="https://res.cloudinary.com/dmbtlv0hg/image/upload/v1696810008/geo_ih5lkw.png" className="h-6 mr-3 sm:h-7" alt="Geohidrac Logo"/>
                   <span className="self-center text-xl text-amber-50 font-semibold whitespace-nowrap dark:text-white">Geohidrac</span>
@@ -26,7 +26,6 @@ export function Sidebar() {
                <ul className="space-y-2 font-medium">
                   <li>
                   <a
-                     to="/dashboard"
                      className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-slate-400 dark:hover:bg-gray-700 group"
                   >
                   <svg 
