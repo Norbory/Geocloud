@@ -1,8 +1,4 @@
 import React, { useState } from "react";
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-=======
->>>>>>> 94209ca181989b9e54c975c7a089d3ecdca9d589
 
 export function Sidebar() {
    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -21,23 +17,11 @@ export function Sidebar() {
             </svg>
          </button>
          <aside id="sidebar-multi-level-sidebar" className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
-<<<<<<< HEAD
-            <div className="h-full px-3 py-4 overflow-y-auto dark:bg-gray-800" style={{ backgroundColor: "#1F263E" }}>
-               <a href="https://www.geohidrac.com/" className="flex items-center pl-2.5 mb-5">
-                  <img src="https://res.cloudinary.com/dmbtlv0hg/image/upload/v1696810008/geo_ih5lkw.png" className="h-6 mr-3 sm:h-7" alt="Geohidrac Logo"/>
-                  <span className="self-center text-xl text-amber-50 font-semibold whitespace-nowrap dark:text-white">Geohidrac</span>
-               </a>
-               <ul className="space-y-2 font-medium">
-                  <li>
-                  <a
-                     className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-slate-400 dark:hover:bg-gray-700 group"
-=======
             <div className="h-full px-3 py-4 overflow-y-auto dark:bg-gray-800" style={{ backgroundColor: "#003049" }}>
                <ul className="space-y-2 font-medium mt-12">
                   <li>
                   <a
                      className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-slate-400 dark:hover:bg-gray-700 group"   
->>>>>>> 94209ca181989b9e54c975c7a089d3ecdca9d589
                   >
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6 text-amber-50">
                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
