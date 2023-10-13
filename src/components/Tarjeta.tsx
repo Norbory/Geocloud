@@ -11,7 +11,7 @@ export function Tarjeta(){
 
     return(
         <div className="flex mt-20 items-center font-sans">
-            <div className="drop-shadow-lg " style={{ width: '320px', height: '200px', backgroundImage: 'url(https://res.cloudinary.com/dmbtlv0hg/image/upload/v1697191130/logo_krlumq.jpg)', backgroundSize: 'contain', backgroundRepeat: 'no-repeat',transform: 'rotate(-90deg)', overflow: "hidden" }}>           
+            <div className="drop-shadow-lg " style={{ width: '300px', height: '200px', backgroundImage: 'url(https://res.cloudinary.com/dmbtlv0hg/image/upload/v1697191130/logo_krlumq.jpg)', backgroundSize: 'contain', backgroundRepeat: 'no-repeat',transform: 'rotate(-90deg)', overflow: "hidden" }}>           
             </div>
             <section className="flex flex-col text-left drop-shadow-lg w-96" style={{translate: '-80px'}}>
                 <h1 className="text-4xl font-bold">DATOS GENERALES</h1>

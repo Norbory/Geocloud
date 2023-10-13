@@ -74,7 +74,7 @@ function NuevoDispositivo() {
         />
       </div>
       <button
-        className="mt-5"
+        className="mt-5 self-center"
         onClick={handleRegistrarClick}
         disabled={!isButtonEnabled}
         style={{ backgroundColor: isButtonEnabled ? "green" : "gray", color: isButtonEnabled ? "white" : "black" }}
@@ -88,4 +88,4 @@ function NuevoDispositivo() {
   );
 }
 
-export default NuevoDispositivo;    
+export default NuevoDispositivo;

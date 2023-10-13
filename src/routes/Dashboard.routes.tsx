@@ -7,7 +7,7 @@ import New from "../components/new"
 export function Dashboard(){
 
     return(
-        <div className='flex flex-col items-start'>
+        <div className='flex flex-col items-center'>
           <Mapa />
           <div className="flex flex-row">
             <Tarjeta />

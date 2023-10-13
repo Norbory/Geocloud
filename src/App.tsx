@@ -5,7 +5,7 @@ import { Dashboard, Device, Page404 } from './routes';
 export default function App() {
   return (
     <Router>
-      <div className='flex' style={{width:"100vw", height:"100vh"}}>
+      <div className='flex overflow-x-hidden' style={{width:"100vw", height:"100vh"}}>
         <Sidebar />
         <Routes>
           <Route path="/" element={<Dashboard />} />

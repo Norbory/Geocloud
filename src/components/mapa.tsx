@@ -24,7 +24,7 @@ function Map() {
       zoom={10} 
       center={center} 
       mapContainerStyle={{ 
-        width: '100%', 
+        width: '90%', 
         height: '400px',
         borderRadius: '8px',
         boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
