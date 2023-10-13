@@ -53,9 +53,9 @@ function NuevoDispositivo() {
       <h1 className="mt-1 text-left text-2xl font-bold">Añadir nuevo dispositivo</h1>
       <div className="flex mt-3">
         <label className="font-semibold">Latitud</label>
-        <input className="ml-3 mr-3 border-solid border-2 text-slate-600" type="number" value={latitud} onChange={handleLatitudChange} placeholder="Coloca la latitud"/>
+        <input className="ml-3 mr-3 border-solid border-2 text-slate-600" type="number" value={latitud} onChange={handleLatitudChange} placeholder="Numero de latitud"/>
         <label className="font-semibold">Longitud</label>
-        <input className="ml-3 mr-3 border-solid border-2 text-slate-600" type="number" value={longitud} onChange={handleLongitudChange} placeholder="Coloca la longitud"/>
+        <input className="ml-3 mr-3 border-solid border-2 text-slate-600" type="number" value={longitud} onChange={handleLongitudChange} placeholder="Numero de longitud"/>
       </div>
       <div className="flex mt-1">
         <label className="font-semibold">Estado del pozo</label>
