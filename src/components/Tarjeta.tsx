@@ -10,7 +10,7 @@ export function Tarjeta(){
 
 
     return(
-        <div className="flex mt-32 items-center font-sans">
+        <div className="flex mt-10 items-center font-sans">
             <div className="drop-shadow-lg" style={{ width: '320px', height: '200px', backgroundImage: 'url(https://www.kallpasab.com/img/img-nexa.jpg)', backgroundSize: 'cover', transform: 'rotate(-90deg)', overflow: "hidden" }}>           
             </div>
             <section className="flex flex-col text-left drop-shadow-lg mr-12">
