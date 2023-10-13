@@ -1,16 +1,19 @@
-import {Sidebar} from "./components/sidebar"
-// import Pantalla from './Pantalla';
-import './App.css'
-import Pantalla from "./Pantalla"
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Sidebar } from './components/sidebar';
+import { Dashboard, Device, Page404 } from './routes';
 
-function App() {
-
+export default function App() {
   return (
-    <div className="w-full flex-col overflow-x-hidden">
-      <Sidebar/>
-      <Pantalla/>
-    </div>
-  )
+    <Router>
+      <div className='flex' style={{width:"100vw", height:"100vh"}}>
+        <Sidebar />
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/device" element={<Device />} />
+          <Route path="*" element={<Page404 />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
-export default App
