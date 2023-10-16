@@ -4,7 +4,7 @@ export function Device() {
   return (
     <div className='ml-3 mt-2 w-screen'>
       {/* titulo de la seccion */}
-        <h1 className='text-[#0C4284] text-3xl font-bold'>Piezometro 101</h1>
+        <h1 className='text-[#D79138] text-3xl font-bold'>Piezometro 101</h1>
         <p className='text-zinc-500 text-xs'>Bienvenido al dashboard estadistico</p>
       {/* Lecturas */}
         <div className='pr-20 mt-10 flex justify-between w-2/3'>
