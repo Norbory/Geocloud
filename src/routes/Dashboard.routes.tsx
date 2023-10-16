@@ -7,6 +7,7 @@ import { Popover } from "@headlessui/react";
 export function Dashboard(){
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [otroSeleccionado, setOtroSeleccionado] = useState(false);
+    const [formularioCompleto, setFormularioCompleto] = useState(false);
 
     const openModal = () => {
       setIsModalOpen(true);
@@ -21,6 +22,18 @@ export function Dashboard(){
         setOtroSeleccionado(true);
       } else {
         setOtroSeleccionado(false);
+      }
+    };
+
+    const verificarFormularioCompleto = () => {
+      const dispositivo = document.getElementById('dispositivo').value;
+      const latitud = document.getElementById('latitud').value;
+      const longitud = document.getElementById('longitud').value;
+
+      if (dispositivo && latitud && longitud) {
+        setFormularioCompleto(true);
+      } else {
+        setFormularioCompleto(false);
       }
     };
 
@@ -95,12 +108,25 @@ export function Dashboard(){
                   </p>
                   <form action="">
                     <div className="mb-4">
+                      <label htmlFor="dispositivo" className="block text-gray-600 font-semibold">ID del dispositivo</label>
+                      <input
+                        type="text"
+                        id="dispositivo"
+                        name="dispositivo"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                        placeholder="Coloca el identificador"
+                        onChange={verificarFormularioCompleto}
+                      />
+                    </div>
+                    <div className="mb-4">
                       <label htmlFor="latitud" className="block text-gray-600 font-semibold">Latitud</label>
                       <input
                         type="number"
                         id="latitud"
                         name="latitud"
                         className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                        placeholder="Coloca la coordenada correspondiente"
+                        onChange={verificarFormularioCompleto}
                       />
                     </div>
                     <div className="mb-4">
@@ -110,18 +136,9 @@ export function Dashboard(){
                         id="longitud"
                         name="longitud"
                         className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                        placeholder="Coloca la coordenada correspondiente"
+                        onChange={verificarFormularioCompleto}
                       />
-                    </div>
-                    <div className="mb-4">
-                      <label htmlFor="estadoPozo" className="block text-gray-600 font-semibold">Estado de pozo</label>
-                      <select
-                        id="estadoPozo"
-                        name="estadoPozo"
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md"
-                      >
-                        <option value="humedo">Húmedo</option>
-                        <option value="seco">Seco</option>
-                      </select>
                     </div>
                     <div className="mb-2">
                       <label className="block text-gray-600 font-semibold mb-2">Intervalo de lecturas</label>
@@ -143,6 +160,7 @@ export function Dashboard(){
                           value="4h"
                           className="mr-2 rounded-full border-gray-300 cursor-pointer"
                           onChange={handleRadioChange}
+                          
                         />
                         <label htmlFor="4h" className="text-gray-600 mr-4">4 horas</label>
 
@@ -178,17 +196,18 @@ export function Dashboard(){
                     </div>
 
                     <div className="mt-6 flex justify-center">
-                      <button
-                        onClick={closeModal}
-                        className="bg-[#16B80C] mr-4 text-white"
-                      >
-                        Confirmar adición
-                      </button>
+                    <button
+                      onClick={closeModal}
+                      className={`bg-[#16B80C] mr-4 text-white ${formularioCompleto ? '' : 'bg-gray-400 cursor-not-allowed'}`}
+                      disabled={!formularioCompleto}
+                    >
+                      Confirmar
+                    </button>
                       <button
                         onClick={closeModal}
                         className="bg-[#F73A3A] mr-4 text-white"
                       >
-                        Cancelar adición
+                        Cancelar
                       </button>
                     </div>
                   </form>

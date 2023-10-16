@@ -36,6 +36,10 @@ function Map() {
           key={index}
           position={marker.position}
           onClick={() => setMarcador(marker)}
+          icon={{
+            url: ('https://cdn-icons-png.flaticon.com/512/2450/2450504.png'),
+            scaledSize: new window.google.maps.Size(60, 60),
+        }}
         />
       ))}
 
