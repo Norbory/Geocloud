@@ -16,7 +16,6 @@ export function Device() {
     };
     const chart = createChart('container', chartOptions);
     const baselineSeries = chart.addBaselineSeries({ baseValue: { type: 'price', price: 25 } });
-
     const data = [
       { value: 1, time: 1642425322 },
       { value: 8, time: 1642511722 },
@@ -26,8 +25,10 @@ export function Device() {
       { value: 43, time: 1642857322 },
       { value: 41, time: 1642943722 },
       { value: 43, time: 1643030122 },
-      { value: 56, time: 1643116522 },
-      { value: 46, time: 1643202922 }
+      { value: 44, time: 1643116522 },
+      { value: 46, time: 1643202922 },
+      { value: 42, time: 1643316522 },
+      { value: 68, time: 1643402922 }
     ];
 
     baselineSeries.setData(data);
