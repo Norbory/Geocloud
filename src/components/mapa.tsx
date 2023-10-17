@@ -42,7 +42,7 @@ function Map() {
         }}
         />
       ))}
-
+  
       {marcador && (
         <InfoWindow
           position={marcador.position}
