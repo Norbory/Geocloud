@@ -1,5 +1,5 @@
 // /* eslint-disable @typescript-eslint/no-unused-vars */
-import { useMemo, useState } from "react";
+import { ReactNode, useMemo, useState } from "react";
 import { GoogleMap, useLoadScript, Marker, InfoWindow} from "@react-google-maps/api";
 
 export default function MapContainer() {
@@ -11,7 +11,10 @@ export default function MapContainer() {
 }
 function Map() {
   const center = useMemo(() => ({ lat: -10.610161608534995, lng: -76.21018744408451 }), []);
-  const [marcador, setMarcador] = useState<{ position: { lat: number; lng: number }; content: string } | null>(null);
+  const [marcador, setMarcador] = useState<{
+    altura: ReactNode;
+    status: string; position: { lat: number; lng: number }; content: string 
+} | null>(null);
 
   const markers = [
     { position: center, content: "Piezometro 101" , status: "Humedo", altura: 12 },
@@ -72,11 +75,11 @@ function Map() {
             </div>
             <div className="flex">
             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480H40c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24V296c0 13.3 10.7 24 24 24s24-10.7 24-24V184c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></svg>
-            {(marcador.altura < 15) && (marcador.altura > 10) ? (
+            {(marcador?.altura && Number(marcador.altura) < 15 && Number(marcador.altura) > 10) ? (
               <p className="ml-1 text-yellow-300">Alerta Amarilla</p>
-            ) :(marcador.altura < 10) && (marcador.altura > 5) ? (
+            ) : (marcador?.altura && Number(marcador.altura) < 10 && Number(marcador.altura) > 5) ? (
               <p className="ml-1 text-amber-600">Alerta Naranja</p>
-            ) : marcador.altura < 5 ? (
+            ) : (marcador.altura && Number(marcador.altura) < 5) ? (
               <p className="ml-1 text-red-600">Alerta Roja</p>
             ) : <p> Normal</p>}
             </div>
