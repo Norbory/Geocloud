@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { createChart, PriceScaleMode } from 'lightweight-charts';
 import { useEffect, useState } from 'react';
 
